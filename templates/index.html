@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Drowsiness Detection System</h1>
+
+        <div class="controls">
+            <button id="start-btn" class="btn" onclick="startDetection()">Start Detection</button>
+            <button id="stop-btn" class="btn btn-danger" onclick="stopDetection()">Stop Detection</button>
+        </div>
+        
+        <div class="video-container">
+            <img id="video" width="600" height="400" style="display:none;" />
+        </div>
+
+        <!-- Add alert message section below the video -->
+        <div id="alert-message" class="alert"></div>
+    </div>
+</body>
+</html>
